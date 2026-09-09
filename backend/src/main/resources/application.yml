@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: aicoding-backend
+
+logging:
+  level:
+    com.aicoding.backend: info
