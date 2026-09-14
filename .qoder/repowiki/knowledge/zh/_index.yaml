@@ -1,0 +1,40 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: main
+nodes_managed: true
+exported_at: "2026-09-10T02:11:28Z"
+modules:
+    "":
+        dir_name: 前后端分离用户管理全栈示例项目
+        title: 前后端分离用户管理全栈示例项目
+        scope:
+            - README.md
+            - .gitignore
+            - .editorconfig
+        source_files: []
+        children:
+            - backend
+            - frontend
+        depends_on: []
+        related_to: []
+    backend:
+        dir_name: 用户管理 REST API 后端服务
+        title: 用户管理 REST API 后端服务
+        scope:
+            - backend/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: frontend
+    frontend:
+        dir_name: Vue 3 前端用户管理界面
+        title: Vue 3 前端用户管理界面
+        scope:
+            - frontend/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend

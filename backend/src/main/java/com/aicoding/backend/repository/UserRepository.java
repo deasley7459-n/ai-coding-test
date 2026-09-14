@@ -4,7 +4,6 @@ import com.aicoding.backend.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -44,7 +43,8 @@ public class UserRepository {
 
     public List<User> findAll() {
         return store.values().stream()
-                .sorted(Comparator.comparing(User::id))
+                .filter(u -> u.id() != null)
+                .sorted((a, b) -> a.id().compareTo(b.id()))
                 .toList();
     }
 
